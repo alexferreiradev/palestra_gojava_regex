@@ -13,15 +13,12 @@ public class MeetupExtractor implements Extractor<List<String>> {
 	public List<String> getResult(String regex) {
 		List<String> participantList = new ArrayList<>();
 
-		Pattern pattern = Pattern.compile("");
+		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(text);
-		boolean found = matcher.find();
-		if (found) {
-			while (matcher.matches()) {
-				String participantName = matcher.group();
+		while (matcher.find()) {
+			String participantName = matcher.group();
 
-				participantList.add(participantName);
-			}
+			participantList.add(participantName);
 		}
 
 		return participantList;
