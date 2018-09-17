@@ -31,7 +31,7 @@ web-app/WEB-INF/tld/fmt.tld
 /eclipse
 
 # Itellij Idea Workspace
-#.idea/*
+.idea/*
 *.iml
 production/*
 
